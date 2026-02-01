@@ -9,7 +9,7 @@ RUN go mod download
 RUN go build ./cmd/mosint
 
 # Release
-FROM alpine:3.22.1
+FROM alpine:3.23.3
 COPY --from=builder /app/v3/mosint /usr/local/bin/
 
 # Copy config file ( Change this to your own config file )
